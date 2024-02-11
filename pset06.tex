@@ -1,0 +1,89 @@
+\documentclass[a4paper]{exam}
+
+\usepackage{amsmath}
+\usepackage[a4paper]{geometry}
+
+\title{Problem Set 06: Laws of Inference}
+\author{CS/MATH 113 Discrete Mathematics}
+\date{Spring 2024}
+
+\boxedpoints
+
+\printanswers
+
+\begin{document}
+\maketitle
+
+\begin{questions}
+ \question 
+  Determine whether each of these arguments is valid. If an argument is correct, what rule of inference is being used? If it is not, what logical error occurs?
+
+\begin{parts}
+    \part If $n$ is a real number such that $n > 1$, then $n^2 > 1$. \\
+    Suppose that $n^2 > 1$. Then $n > 1$.
+     \begin{solution}
+    % Enter your solution here.
+    \end{solution}
+    
+    \part If $n$ is a real number with $n > 3$, then $n^2 > 9$. \\
+    Suppose that $n^2 \leq 9$. Then $n \leq 3$.
+     \begin{solution}
+    % Enter your solution here.
+    \end{solution}
+    
+    \part If $n$ is a real number with $n > 2$, then $n^2 > 4$. \\
+    Suppose that $n \leq 2$. Then $n^2 \leq 4$.
+     \begin{solution}
+    % Enter your solution here.
+     \end{solution}
+   \end{parts}
+   
+  \question  Identify the error or errors in this argument that supposedly shows that if $\forall x(P(x) \lor Q(x))$ is true then $\forall x P(x) \lor \forall x Q(x)$ is true.
+\begin{enumerate}
+    \item $\forall x(P(x) \lor Q(x))$ \hfill Premise
+    \item $P(c) \lor Q(c)$ \hfill Universal instantiation from (1)
+    \item $P(c)$ \hfill Simplification from (2)
+    \item $\forall x P(x)$ \hfill Universal generalization from (3)
+    \item $Q(c)$ \hfill Simplification from (2)
+    \item $\forall x Q(x)$ \hfill Universal generalization from (5)
+    \item $\forall x(P(x) \lor \forall x Q(x))$ \hfill Conjunction from (4) and (6)
+\end{enumerate}
+  \begin{solution}
+    % Enter your solution here.
+  \end{solution}
+  
+  \question Sheikh Chilly, famous for his bizarre sense of humor and love of logic puzzles, left the following clues regarding the location of the hidden treasure. The treasure can only be in one place. If the house is next to a lake, then the treasure is in the kitchen. If the house is not next to a lake or the treasure is buried under the flagpole, then the tree in the front yard is an elm and the tree in the back yard is not an oak. If the treasure is in the garage, then the tree in the back yard is not an oak.  If the treasure is not buried under the flagpole, then the tree in the front yard is not an elm. 2 The treasure is not in the kitchen. Using rules of inference, determine where the treasure is hidden. Clearly state what your propositions represent.
+  \begin{solution}
+    % Enter your solution here.
+  \end{solution}
+  
+  \question Tommy Flanagan was telling you what he ate yesterday afternoon. He tells you, “I had either popcorn or raisins. Also, if I had cucumber sandwiches, then I had soda. But I didn't drink soda or tea.” You know that Tommy is the world’s worst liar, and everything he says is false. What did Tommy eat?
+Justify your answer by writing all of Tommy's statements using sentence variables (P, Q, R, S, T), taking their negations, and using these to deduce what Tommy actually ate.
+
+  \begin{solution}
+    % Enter your solution here.
+  \end{solution}
+
+  \question Following is a quote by Sherlock Holmes from \textit{“A Study in Scarlet”} in which he solves a murder case.
+\begin{quote}
+``And now we come to the great question as to the reason why. Robbery has not been the object of the murder, for nothing was taken. Was it politics, then, or was it a woman? That is the question which confronted me. I was inclined from the first to the latter supposition. Political assassins are only too glad to do their work and fly. This murder had, on the contrary, been done most deliberately, and the perpetrator has left his tracks all over the room, showing he had been there all the time.''
+\end{quote}
+After stating the above, Sherlock Holmes concludes: \textit{``It was a woman''}.
+
+Show the premises and logical inferences involved in deducing the conclusion.
+
+  \begin{solution}
+    % Enter your solution here.
+  \end{solution}
+  
+  \question Use rules of inference to show that if $\forall x(P(x) \implies (Q(x) \land S(x)))$ and $\forall x(P(x) \land R(x))$ are true, then $\forall x(R(x) \land S(x))$ is true.
+  \begin{solution}
+      % Enter your solution here.
+    \end{solution}
+
+\end{questions}
+\end{document}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
