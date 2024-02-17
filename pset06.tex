@@ -22,19 +22,22 @@
     \part If $n$ is a real number such that $n > 1$, then $n^2 > 1$. \\
     Suppose that $n^2 > 1$. Then $n > 1$.
      \begin{solution}
-    % Enter your solution here.
+    
+    The argument is incorrect, the fallacy occurring here is fallacy of affirming the conclusion.
     \end{solution}
     
     \part If $n$ is a real number with $n > 3$, then $n^2 > 9$. \\
     Suppose that $n^2 \leq 9$. Then $n \leq 3$.
      \begin{solution}
-    % Enter your solution here.
+    
+    The argument is correct, the rule of inference used here is Modus tollens.
     \end{solution}
     
     \part If $n$ is a real number with $n > 2$, then $n^2 > 4$. \\
     Suppose that $n \leq 2$. Then $n^2 \leq 4$.
      \begin{solution}
-    % Enter your solution here.
+    
+    The argument is incorrect, the fallacy occurring here is fallacy of denying the hypothesis.
      \end{solution}
    \end{parts}
    
@@ -49,19 +52,48 @@
     \item $\forall x(P(x) \lor \forall x Q(x))$ \hfill Conjunction from (4) and (6)
 \end{enumerate}
   \begin{solution}
-    % Enter your solution here.
+    
+    The error occurs in step 2. We do not know if the same arbitrary c is true for both P(x) and Q(x).
   \end{solution}
   
   \question Sheikh Chilly, famous for his bizarre sense of humor and love of logic puzzles, left the following clues regarding the location of the hidden treasure. The treasure can only be in one place. If the house is next to a lake, then the treasure is in the kitchen. If the house is not next to a lake or the treasure is buried under the flagpole, then the tree in the front yard is an elm and the tree in the back yard is not an oak. If the treasure is in the garage, then the tree in the back yard is not an oak.  If the treasure is not buried under the flagpole, then the tree in the front yard is not an elm. 2 The treasure is not in the kitchen. Using rules of inference, determine where the treasure is hidden. Clearly state what your propositions represent.
   \begin{solution}
-    % Enter your solution here.
+    
+    1. The treasure can only be in one place.\\
+    2. If the house is next to a lake, then the treasure is in the kitchen.\\
+    3. If the house is not next to a lake or the treasure is buried under the flagpole, then the tree in the front yard is an elm and the tree in the back yard is not an oak.\\
+    4. If the treasure is in the garage, then the tree in the back yard is not an oak. \\
+    5. If the treasure is not buried under the flagpole, then the tree in the front yard is not an elm.\\
+    6. 2 The treasure is not in the kitchen. \\
+    From 6 we know that the treasure is not in the kitchen. From 2 we can deduce that the house is not next to the lake. Then from 3 we know that the tree in the front yard is an elm and the tree in the back yard is not an oak. From 4 we can conclude that the treasure is in the garage since the tree in the back yard is not an oak.
+    
   \end{solution}
   
   \question Tommy Flanagan was telling you what he ate yesterday afternoon. He tells you, “I had either popcorn or raisins. Also, if I had cucumber sandwiches, then I had soda. But I didn't drink soda or tea.” You know that Tommy is the world’s worst liar, and everything he says is false. What did Tommy eat?
 Justify your answer by writing all of Tommy's statements using sentence variables (P, Q, R, S, T), taking their negations, and using these to deduce what Tommy actually ate.
 
   \begin{solution}
-    % Enter your solution here.
+  \\
+    P: Tommy had popcorn\\
+    Q: Tommy had sandwiches\\
+    R: Tommy had raisins\\
+    S: Tommy had soda\\
+    T: Tommy had tea\\
+    1. P $\lor$ R.\\
+    2. Q $\implies$ S.\\
+    3. $\lnot$ (S $\lor$ T).\\
+    Applying negation\\
+    1. $\lnot$ (P $\lor$ R).\\
+    2. $\lnot$ (Q $\implies$ S).\\
+    3. $\lnot$ $\lnot$ (S $\lor$ T).\\
+    4. $\lnot$ P $\land$ $\lnot$ R.      \; 1, DM\\
+    5. $\lnot$ ( $\lnot$ Q $\lor$ S).    \\ 
+    6. S $\lor$ T.       \;  \\
+    7. Q $\land$ $\lnot$ S.       \;  5, DM\\
+    8. $\lnot$ S $\implies$ T.   \; 6, CL\\
+    9. $\lnot$ S  \; 7, Simp\\
+    10. T \; \; 8, 9 MP\\
+    Thus we can conclude that Tom only had tea.
   \end{solution}
 
   \question Following is a quote by Sherlock Holmes from \textit{“A Study in Scarlet”} in which he solves a murder case.
@@ -73,12 +105,27 @@ After stating the above, Sherlock Holmes concludes: \textit{``It was a woman''}.
 Show the premises and logical inferences involved in deducing the conclusion.
 
   \begin{solution}
-    % Enter your solution here.
+    
+    1. Robbery cannot be the object of the murder because nothing was taken.\\
+    2. If robbery is not the reason then the object is either politics or a woman.\\
+     Supposing that politics was the reason, we know that political assassins are very quick whereas the murderer had left evidence behind which shows that he was there for a long time, hence this cannot be the case. This means that the motive was a woman. 
+    
+    
   \end{solution}
   
   \question Use rules of inference to show that if $\forall x(P(x) \implies (Q(x) \land S(x)))$ and $\forall x(P(x) \land R(x))$ are true, then $\forall x(R(x) \land S(x))$ is true.
   \begin{solution}
-      % Enter your solution here.
+  
+      1. $\forall x(P(x) \implies (Q(x) \land S(x)))$ \;given\\
+      2. $\forall x(P(x) \land R(x))$ \;given\\
+      3. $ P(c) \implies (Q(c) \land S(c))$ \;1, UI\\
+      4. $P(c) \land R(c)$ \; 2, UI\\
+      5. $R(c)$ \; 4, simp\\
+      6. $P(c)$ \; 4, simp\\
+      7. $Q(c) \land S(c)$ \; 3,6 MP\\
+      8. $ S(c)$ \; 7, simp\\
+      9. $R(c)$ $\land$ $S(c)$ \; 5, 8 Conj\\
+      10. $\forall x(R(x) \land S(x))$ \; 9, UG
     \end{solution}
 
 \end{questions}
